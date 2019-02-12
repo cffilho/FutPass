@@ -1,0 +1,163 @@
+﻿@model Teste_de_aplicação.Models.Club
+
+
+@{
+    ViewBag.Title = "Details Club";
+}
+
+<div class="container emp-profile">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+
+                    <img src="@Html.DisplayFor(model => model.GetLogo)" width=100 height=100/>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h4>
+                        @Html.DisplayFor(model => model.ClubName)
+                    </h4>
+                    <h5>
+                        @Html.DisplayFor(model => model.Country.CountryName)
+                        <spam>
+                            <img src="@Html.DisplayFor(model => model.GetFlagCountry)"/>
+                        </spam>
+                    </h5>
+                    <p class="proile-rating">Price Merch: : <span>@Html.DisplayFor(model => model.PriceMerch) M€</span></p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">More Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+
+
+                @Html.ActionLink("Edit Club", "Edit", new { id = Model.ClubID }, new { @class = "btn btn-warning" })
+
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                    <p>Related Links</p>
+                    <a href="https://@Html.DisplayFor(model => model.WebSite)" target="_blank">@Html.DisplayFor(model => model.ClubName)<spam> Web Site</spam></a><br />
+                    <a href=""></a><br />
+                    <a href=""></a><br />
+                    <br />
+
+                    @Html.ActionLink("Back to List", "Index", "Clubs", new { @class = "btn btn-info" })
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.ClubName)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Full Name:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    @Html.DisplayFor(model => model.ClubFullName)
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Foundation Date:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.FoundationDate)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Country:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    @Html.DisplayFor(model => model.Country.CountryName)
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>City:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>@Html.DisplayFor(model => model.CityClub)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Stadium:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>@Html.DisplayFor(model => model.Stadium)</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>President:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>@Html.DisplayFor(model => model.President)</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Price Merch:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>@Html.DisplayFor(model => model.PriceMerch) M€</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>History:</label><br />
+                            <p>@Html.DisplayFor(model => model.ClubHistory)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+</div>

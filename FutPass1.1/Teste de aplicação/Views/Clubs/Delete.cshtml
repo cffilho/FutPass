@@ -1,0 +1,80 @@
+﻿@model Teste_de_aplicação.Models.Club
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="row">
+    <div class="col-sm-8">
+        <h5 class="m-0 font-weight-bold text-primary">Delete Club</h5>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-sm-8">
+        <h3>Are you sure you want to delete this?</h3>
+    </div>
+</div>
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageShield)
+        </dt>
+
+        <dd>
+            <img src="@Html.DisplayFor(model => model.GetLogo)" width=100 height=100/>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClubFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClubFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FoundationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoundationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityClub)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityClub)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stadium)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stadium)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country.CountryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country.CountryName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index", "Clubs", new { @class = "btn btn-info" })
+        </div>
+    }
+</div>

@@ -1,0 +1,172 @@
+﻿@model Teste_de_aplicação.Models.Player
+
+@{
+    ViewBag.Title = "Player Details";
+}
+
+<div class="container emp-profile">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+
+                    <img src="@Html.DisplayFor(model => model.GetPhoto)" alt="" width=139 height=181 />
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h4>
+                        @Html.DisplayFor(model => model.NickName)
+                    </h4>
+                    <h5>
+                        @Html.DisplayFor(model => model.Country.CountryName)
+                        <spam>
+                            <img src="@Html.DisplayFor(model => model.GetFlagCountry)" />
+                        </spam>
+                    </h5>
+                    <h5>
+                        @Html.DisplayFor(model => model.Club.ClubName)
+                    </h5>
+                    <p class="proile-rating">Number: <span>#@Html.DisplayFor(model => model.Number)</span></p>
+                    <p class="proile-rating">Position: <span>@Html.DisplayFor(model => model.Position.Position1)</span></p>
+                    <p class="proile-rating">Age: <span>@Html.DisplayFor(model => model.Age)</span></p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="true-tab" data-toggle="tab" href="#home" role="tab" aria-controls="about" aria-selected="true">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="moreInformation-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="moreInformation" aria-selected="false">More Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+
+
+                @Html.ActionLink("Edit Player", "Edit", new { id = Model.PlayerID }, new { @class = "btn btn-warning" })
+
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                    <p>Related Links</p>
+                    <a href="https://@Html.DisplayFor(model => model.Club.WebSite)" target="_blank">@Html.DisplayFor(model => model.Club.ClubName)<spam> Web Site</spam></a><br />
+                    <a href=""></a><br />
+                    <a href=""></a><br />
+                    <br />
+
+                    @Html.ActionLink("Back to List", "Index", "Players", new { @class = "btn btn-info" })
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.NickName)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Full Name:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    @Html.DisplayFor(model => model.FirstName)
+                                    <spam>
+
+                                    </spam>
+                                    @Html.DisplayFor(model => model.LastName)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Date Of Birth:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.DateOfBirth)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Country:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    @Html.DisplayFor(model => model.Country.CountryName)
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Club:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.Club.ClubName)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Position:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.Position.Position1)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Status:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.PlayerStatus.NameStatus)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Price Pass:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.PricePass) M€</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Heigth:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Html.DisplayFor(model => model.Height)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+</div>

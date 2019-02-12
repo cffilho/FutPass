@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UEFAModelStoreContainer" CdmEntityContainer="UEFAEntities">
+    <EntitySetMapping Name="Club">
+      <EntityTypeMapping TypeName="UEFAModel.Club">
+        <MappingFragment StoreEntitySet="Club">
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+          <ScalarProperty Name="ClubName" ColumnName="ClubName" />
+          <ScalarProperty Name="ClubFullName" ColumnName="ClubFullName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="FoundationDate" ColumnName="FoundationDate" />
+          <ScalarProperty Name="CityClub" ColumnName="CityClub" />
+          <ScalarProperty Name="PriceMerch" ColumnName="PriceMerch" />
+          <ScalarProperty Name="ImageShield" ColumnName="ImageShield" />
+          <ScalarProperty Name="ClubHistory" ColumnName="ClubHistory" />
+          <ScalarProperty Name="President" ColumnName="President" />
+          <ScalarProperty Name="Stadium" ColumnName="Stadium" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="UEFAModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manager">
+      <EntityTypeMapping TypeName="UEFAModel.Manager">
+        <MappingFragment StoreEntitySet="Manager">
+          <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Player">
+      <EntityTypeMapping TypeName="UEFAModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+          <ScalarProperty Name="PlayerStatusID" ColumnName="PlayerStatusID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Appearances" ColumnName="Appearances" />
+          <ScalarProperty Name="YellowCard" ColumnName="YellowCard" />
+          <ScalarProperty Name="RedCard" ColumnName="RedCard" />
+          <ScalarProperty Name="GoalsScored" ColumnName="GoalsScored" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="PricePass" ColumnName="PricePass" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlayerStatus">
+      <EntityTypeMapping TypeName="UEFAModel.PlayerStatus">
+        <MappingFragment StoreEntitySet="PlayerStatus">
+          <ScalarProperty Name="PlayerStatusID" ColumnName="PlayerStatusID" />
+          <ScalarProperty Name="NameStatus" ColumnName="NameStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Position">
+      <EntityTypeMapping TypeName="UEFAModel.Position">
+        <MappingFragment StoreEntitySet="Position">
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="Position1" ColumnName="Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleType">
+      <EntityTypeMapping TypeName="UEFAModel.RoleType">
+        <MappingFragment StoreEntitySet="RoleType">
+          <ScalarProperty Name="RoleDesc" ColumnName="RoleDesc" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="UEFAModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserStatus">
+      <EntityTypeMapping TypeName="UEFAModel.UserStatus">
+        <MappingFragment StoreEntitySet="UserStatus">
+          <ScalarProperty Name="StatusDesc" ColumnName="StatusDesc" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="47dcd93b6bb24ad983581507e3b415b6" Name="Diagram1">
+        <EntityTypeShape EntityType="UEFAModel.Club" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UEFAModel.Country" Width="1.5" PointX="5.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UEFAModel.Manager" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UEFAModel.Player" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UEFAModel.PlayerStatus" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="UEFAModel.Position" Width="1.5" PointX="8.25" PointY="8.625" IsExpanded="true" />
+        <AssociationConnector Association="UEFAModel.FK_ClubID_Manager" ManuallyRouted="false" />
+        <AssociationConnector Association="UEFAModel.FK_ClubID_Player" ManuallyRouted="false" />
+        <AssociationConnector Association="UEFAModel.FK_ContryID_Club" ManuallyRouted="false" />
+        <AssociationConnector Association="UEFAModel.FK_ContryID_Manager" ManuallyRouted="false" />
+        <AssociationConnector Association="UEFAModel.FK_ContryID_Player" ManuallyRouted="false" />
+        <AssociationConnector Association="UEFAModel.FK_PlayerStatusID_Player" ManuallyRouted="false" />
+        <AssociationConnector Association="UEFAModel.FK_PositionID_Player" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="UEFAModel.RoleType" Width="1.5" PointX="13.125" PointY="1" />
+        <EntityTypeShape EntityType="UEFAModel.Users" Width="1.5" PointX="15.375" PointY="0.5" />
+        <EntityTypeShape EntityType="UEFAModel.UserStatus" Width="1.5" PointX="13.125" PointY="11" />
+        <AssociationConnector Association="UEFAModel.RoleID_FK_Users" />
+        <AssociationConnector Association="UEFAModel.StatusID_FK_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Teste_de_aplicação.Models.Manager>
+
+@{
+    ViewBag.Title = "Team Managers";
+}
+
+<div class="card shadow mb-4">
+
+    <div class="card-header py-3">
+        <div class="row">
+            <div class="col-sm-8">
+                <h5 class="m-0 font-weight-bold text-primary">Team Manager List</h5>
+            </div>
+            <div class="col-sm-4">
+               
+                <a href="@Url.Action("Create","Managers")" class="btn btn-info btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fa fa-user-plus"></i>
+                    </span>
+                    <span class="text">Add Manager</span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                                <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending" style="width: 90px;">Name Manager</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Date of Birth: activate to sort column ascending" style="width: 90px;">Date of Birth</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Club: activate to sort column ascending" style="width: 90px;">Club</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Country: activate to sort column ascending" style="width: 90px;">Country</th>
+                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Country: activate to sort column ascending" style="width: 65px;"></th>
+
+
+                            </thead>
+
+                            <tfoot>
+                                <tr>
+                                    <th rowspan="1" colspan="1">Name Manager</th>
+                                    <th rowspan="1" colspan="1">Date of Birth</th>
+                                    <th rowspan="1" colspan="1">Club</th>
+                                    <th rowspan="1" colspan="1">Country</th>
+
+                                </tr>
+                            </tfoot>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr role="row" class="odd">
+                                        <td>@Html.DisplayFor(modelItem => item.NickName)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.DateOfBirth)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Club.ClubName)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Country.CountryName)</td>
+                                        <td>
+                                            <a href="@Url.Action("Edit", new { id = item.ManagerID })"><i class="fa fa-pencil"></i></a> |
+                                            <a href="@Url.Action("Details", new { id = item.ManagerID })"><i class="fa fa-info-circle"></i></a> |
+                                            <a href="@Url.Action("Delete", new { id = item.ManagerID })"><i class="fa fa-times"></i></a>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+                </div>
+
