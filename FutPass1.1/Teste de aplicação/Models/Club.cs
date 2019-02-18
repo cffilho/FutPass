@@ -62,6 +62,7 @@ namespace Teste_de_aplicação.Models
         [Display(Name = "Stadium:")]
         public string Stadium { get; set; }
 
+        [Required]
         [Display(Name = "WebSite:")]
         public string WebSite { get; set; }
 

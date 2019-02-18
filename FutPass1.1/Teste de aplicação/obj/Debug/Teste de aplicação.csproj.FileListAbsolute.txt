@@ -262,8 +262,8 @@ C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\bin\
 C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\obj\Debug\Teste de aplicação.csprojAssemblyReference.cache
 C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\obj\Debug\Teste de aplicação.csproj.CoreCompileInputs.cache
 C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\obj\Debug\Teste de aplicação.csproj.CopyComplete
 C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\obj\Debug\Teste de aplicação.dll
 C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\obj\Debug\Teste de aplicação.pdb
+C:\Users\Figueira\source\repos\Teste de aplicação1.1\Teste de aplicação\obj\Debug\Teste de aplicação.csprojAssemblyReference.cache

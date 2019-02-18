@@ -18,6 +18,13 @@ namespace Teste_de_aplicação
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
             );
+
+
+            routes.MapRoute(
+                name: "Users",
+                url: "Teste/",
+                defaults: new { controller = "Users", action = "Index"}
+            );
         }
     }
 }
