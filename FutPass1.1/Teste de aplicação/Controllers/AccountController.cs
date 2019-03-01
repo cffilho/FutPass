@@ -56,6 +56,8 @@ namespace Teste_de_aplicação.Controllers
                                 }
                                 /*armazenar o nome do usuário na Sssion*/
                                 Session["Name"] = vLogin.FirstName;
+                                /*armazenar role do usuário*/
+                                Session["Role"] = vLogin.RoleType.RoleName;
                                 /*LastName*/
                                 Session["LastName"] = vLogin.LastName;
                                 /*retorna para a tela inicial do Home*/

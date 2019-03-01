@@ -13,13 +13,16 @@
             </div>
             <div class="col-sm-4">
                
-                <a href="@Url.Action("Create","Managers")" class="btn btn-info btn-icon-split">
+                @{
+                    if (Session["Role"].ToString() == "Administrator") {
+                <a href="@Url.Action("Create", "Managers")" class="btn btn-info btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fa fa-user-plus"></i>
                     </span>
                     <span class="text">Add Manager</span>
                 </a>
-                
+                        }
+                    }
             </div>
         </div>
     </div>
@@ -63,9 +66,17 @@
                                         <td>@Html.DisplayFor(modelItem => item.Club.ClubName)</td>
                                         <td>@Html.DisplayFor(modelItem => item.Country.CountryName)</td>
                                         <td>
-                                            <a href="@Url.Action("Edit", new { id = item.ManagerID })"><i class="fa fa-pencil"></i></a> |
-                                            <a href="@Url.Action("Details", new { id = item.ManagerID })"><i class="fa fa-info-circle"></i></a> |
-                                            <a href="@Url.Action("Delete", new { id = item.ManagerID })"><i class="fa fa-times"></i></a>
+
+
+                                            <a href="@Url.Action("Edit", new { id = item.ManagerID })">
+                                            @if (Session["Role"].ToString()== "Administrator"){<i class="fa fa-pencil"></i>}</a>
+
+                                            <a href="@Url.Action("Delete", new { id = item.ManagerID })">
+                                            @if (Session["Role"].ToString() == "Administrator"){<i class="fa fa-times"></i>}</a>
+                                            
+                                            
+                                            
+                                            <a href="@Url.Action("Details", new { id = item.ManagerID })"><i class="fa fa-info-circle"></i></a>
 
                                         </td>
                                     </tr>

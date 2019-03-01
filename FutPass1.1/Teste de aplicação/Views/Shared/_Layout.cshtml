@@ -82,14 +82,16 @@
                     <span>Team Managers</span>
                 </a>
             </li>
-
+            
+            @{ 
+             if (Session["Role"].ToString() == "Administrator"){
             <li class="nav-item">
                 <a class="nav-link" href="@Url.Action("Index", "Users")">
                     <i class="fa fa-user"></i>
                     <span>Users</span>
                 </a>
-            </li>
-
+            </li>}
+                }
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

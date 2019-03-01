@@ -41,9 +41,10 @@
 
             <div class="col-md-2">
 
-
-                @Html.ActionLink("Edit Club", "Edit", new { id = Model.ClubID }, new { @class = "btn btn-warning" })
-
+                @if (Session["Role"].ToString() == "Administrator")
+                {
+                    @Html.ActionLink("Edit Club", "Edit", new { id = Model.ClubID }, new { @class = "btn btn-warning" })
+                }
 
 
             </div>
